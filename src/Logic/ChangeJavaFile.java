@@ -73,7 +73,7 @@ public class ChangeJavaFile implements Runnable {
             var data = ReadFile(initialPath);
             var resultData = new LinkedList<String>();
 
-            String regular = "^//";
+            String regular = "^(( )|\t)*//";
             Pattern pattern = Pattern.compile(regular);
             Matcher matcher;
 

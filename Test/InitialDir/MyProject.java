@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-import Logic.*;
+//import Logic.*;
 
 public class Main {
 
@@ -20,13 +20,13 @@ public class Main {
             Thread thread = new Thread(searchJavaFileInDirectory);
 
             thread.start();
-
-            System.out.print("Потік для знаходження Java файлів в папці по шляху : " + initialDir.getPath());
-            System.out.println("\tІ з індексом = " + thread.getName() + "\t Успішно запущений.");
+            
+            //System.out.print("Потік для знаходження Java файлів в папці по шляху : " + initialDir.getPath());
+            //System.out.println("\tІ з індексом = " + thread.getName() + "\t Успішно запущений.");
 
             thread.join();
 
-            System.out.println("Потік з індексом = " + thread.getName() + "\t Успішно завершений.");
+            //System.out.println("Потік з індексом = " + thread.getName() + "\t Успішно завершений.");
 
             javaList = searchJavaFileInDirectory.call();
 
@@ -34,7 +34,7 @@ public class Main {
             System.out.println(ex.getMessage());
         }
 
-
+/*
         try {
             var threads = new LinkedList<Thread>();
 
@@ -57,7 +57,7 @@ public class Main {
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-
+*/
 
     }
 }
