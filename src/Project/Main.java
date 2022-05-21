@@ -12,8 +12,19 @@ public class Main {
 
         List<String> javaList = new LinkedList<>();
 
-        File initialDir = new File("Test\\InitialDir");
-        File finalDir = new File("Test\\ResultDir");
+        String initialDirPath = "Test\\InitialDir";
+        String finalDirPath = "Test\\ResultDir";
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введіть шлях до початкової папки: ");
+        initialDirPath = in.nextLine();
+
+        in = new Scanner(System.in);
+        System.out.print("Введіть шлях до кінцевої папки: ");
+        finalDirPath = in.nextLine();
+
+        File initialDir = new File(initialDirPath);
+        File finalDir = new File(finalDirPath);
 
         try {
             SearchJavaFile searchJavaFileInDirectory = new SearchJavaFile(initialDir);
